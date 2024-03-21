@@ -60,8 +60,8 @@ def plot_loss(ax):
 w, h = 15, 15
 fig = plt.figure(figsize=(4.2, 3.1))
 ax = fig.add_subplot(111, projection='3d')
-ax.set_xlabel("$\\beta_1$", labelpad=0)
-ax.set_ylabel("$\\beta_2$", labelpad=0)
+ax.set_xlabel("$b_1$", labelpad=0)
+ax.set_ylabel("$b_2$", labelpad=0)
 ax.tick_params(axis='x', pad=0)
 ax.tick_params(axis='y', pad=0)
 ax.set_xlim(-15, 20)
@@ -75,5 +75,5 @@ ax.view_init(elev=38, azim=-134)
 
 plt.tight_layout()
 print(f"../images/constraint3D.svg")
-plt.savefig(f"../images/constraint3D.svg", bbox_inches=0, pad_inches=0)
+plt.savefig(f"../images/constraint3D.png", bbox_inches=0, pad_inches=0)
 plt.show()

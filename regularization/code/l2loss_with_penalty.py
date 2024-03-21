@@ -33,8 +33,9 @@ lmbdas = [0]*3 + lmbdas + [last_lmbda]*3
 for i,lmbda in enumerate(lmbdas):
     fig = plt.figure(figsize=(4.2, 3.1))
     ax = fig.add_subplot(111, projection='3d')
-    ax.set_xlabel("$\\beta_1$", labelpad=0)
-    ax.set_ylabel("$\\beta_2$", labelpad=0)
+    ax.set_xlabel("$b_1$", labelpad=0)
+    ax.set_ylabel("$b_2$", labelpad=0)
+    ax.set_zlabel("$cost$", labelpad=1)
     ax.tick_params(axis='x', pad=0)
     ax.tick_params(axis='y', pad=0)
     ax.set_zlim(0, 1400)
@@ -43,7 +44,7 @@ for i,lmbda in enumerate(lmbdas):
     cy = -15
 
     ax.plot([cx], [cy], marker='x', markersize=10, color='black')
-    ax.text(-20,20,800, f"$\lambda={lmbda:.1f}$", fontsize=14)
+    ax.text(-20,20,800, f"$\\alpha={lmbda:.1f}$", fontsize=14)
 
     beta0 = np.linspace(-30, 30, 300)
     beta1 = np.linspace(-30, 30, 300)
